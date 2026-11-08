@@ -101,22 +101,22 @@
   }
 
   .text-gradient-purple-gold {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-shivayan-purple to-shivayan-gold animate-gradient-flow;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF5803] via-[#FF7800] to-[#FDBA01] animate-gradient-flow;
     background-size: 200% 200%;
   }
 
   .text-gradient-orange-yellow {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-shivayan-orange to-shivayan-yellow animate-gradient-flow;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF5803] to-[#FDBA01] animate-gradient-flow;
     background-size: 200% 200%;
   }
 
   .text-gradient-cyan-purple {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-shivayan-cyan to-shivayan-purple animate-gradient-flow;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#00D2FF] via-[#3B82F6] to-[#FF5803] animate-gradient-flow;
     background-size: 200% 200%;
   }
 
   .hero-gradient {
-    @apply bg-gradient-to-br from-shivayan-purple via-shivayan-dark-purple to-shivayan-gold animate-gradient-flow;
+    @apply bg-gradient-to-br from-[#050C1E] via-[#0A1E2F] to-[#111D33] animate-gradient-flow;
     background-size: 200% 200%;
   }
 
@@ -125,11 +125,11 @@
   }
 
   .link-underline {
-    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-shivayan-gold after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#FF5803] after:transition-all after:duration-300 hover:after:w-full;
   }
 
   .btn-gradient {
-    @apply bg-gradient-to-r from-shivayan-gold to-shivayan-orange hover:from-shivayan-orange hover:to-shivayan-gold transition-all duration-500 text-shivayan-dark-purple font-bold;
+    @apply bg-gradient-to-r from-[#FF5803] via-[#FF6900] to-[#FDBA01] hover:from-[#FF6900] hover:to-[#FF5803] transition-all duration-500 text-white font-bold shadow-[0_0_20px_rgba(255,88,3,0.35)];
   }
 
   .content-section {
@@ -137,7 +137,7 @@
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold mb-8 relative after:absolute after:bottom-0 after:left-0 after:w-24 after:h-1 after:bg-shivayan-gold;
+    @apply text-3xl md:text-4xl font-bold mb-8 relative after:absolute after:bottom-0 after:left-0 after:w-24 after:h-1 after:bg-gradient-to-r after:from-[#FF5803] after:to-[#FDBA01];
   }
   
   /* Multilingual typography classes */
@@ -209,7 +209,7 @@
   }
   
   .designer-card-gradient {
-    @apply relative overflow-hidden rounded-xl border bg-gradient-to-br from-shivayan-purple/10 to-shivayan-gold/10 p-6 transition-all duration-300 hover:shadow-lg;
+    @apply relative overflow-hidden rounded-xl border bg-gradient-to-br from-[#FF5803]/10 to-[#FDBA01]/10 p-6 transition-all duration-300 hover:shadow-lg;
   }
   
   .designer-card-glass {
@@ -221,6 +221,6 @@
   }
   
   .designer-card-accent {
-    @apply relative overflow-hidden rounded-xl border-l-4 border-shivayan-gold bg-card p-6 transition-all duration-300 hover:shadow-lg;
+    @apply relative overflow-hidden rounded-xl border-l-4 border-[#FF5803] bg-card p-6 transition-all duration-300 hover:shadow-lg;
   }
 }

@@ -31,10 +31,10 @@ const CustomButton = ({
   href,
 }: CustomButtonProps) => {
   const buttonVariants = {
-    primary: 'bg-gradient-to-r from-shivayan-gold to-shivayan-orange hover:from-shivayan-orange hover:to-shivayan-gold text-shivayan-dark-purple font-bold shadow-lg',
-    secondary: 'bg-gradient-to-r from-shivayan-purple to-shivayan-dark-purple hover:from-shivayan-dark-purple hover:to-shivayan-purple text-white font-bold shadow-lg',
-    outline: 'border-2 border-shivayan-gold hover:bg-shivayan-gold/10 text-shivayan-gold',
-    text: 'text-shivayan-purple hover:text-shivayan-dark-purple hover:bg-shivayan-purple/10',
+    primary: 'bg-gradient-to-r from-[#FF5803] via-[#FF6900] to-[#FDBA01] hover:from-[#FF6900] hover:to-[#FF5803] text-white font-bold shadow-[0_0_20px_rgba(255,88,3,0.35)]',
+    secondary: 'bg-gradient-to-r from-[#0A1E2F] to-[#111D33] hover:from-[#111D33] hover:to-[#0A1E2F] text-white font-bold shadow-lg border border-[#FF5803]/30',
+    outline: 'border-2 border-[#FF5803] hover:bg-[#FF5803]/10 text-[#FF5803] hover:text-[#FF7800]',
+    text: 'text-[#FF5803] hover:text-[#FDBA01] hover:bg-[#FF5803]/10',
   };
 
   const buttonSizes = {
@@ -44,7 +44,7 @@ const CustomButton = ({
   };
 
   const buttonClasses = cn(
-    'rounded-md inline-flex items-center justify-center transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-shivayan-gold focus:ring-opacity-50',
+    'rounded-md inline-flex items-center justify-center transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-[#FF5803] focus:ring-opacity-50',
     buttonVariants[variant],
     buttonSizes[size],
     fullWidth && 'w-full',

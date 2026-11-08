@@ -88,11 +88,11 @@ const AppRoutes = () => {
               <Blog />
             </Suspense>
           } /> */}
-          {/* <Route path="/careers" element={
+          <Route path="/careers" element={
             <Suspense fallback={<LoadingFallback />}>
               <Careers />
             </Suspense>
-          } /> */}
+          } />
           <Route path="/contact" element={
             <Suspense fallback={<LoadingFallback />}>
               <Contact />

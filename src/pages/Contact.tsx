@@ -34,7 +34,7 @@ const Contact = () => {
                   </svg>
                   <div>
                     <p className="font-medium text-gray-700">Address</p>
-                    <p className="text-gray-600">H-424, Eknath Nagar, Usmanpura, Chh Sambhaji Nagar</p>
+                    <p className="text-gray-600">Hanumanta nagar lokhande mala jail road</p>
                   </div>
                 </div>
 
@@ -44,7 +44,7 @@ const Contact = () => {
                   </svg>
                   <div>
                     <p className="font-medium text-gray-700">Phone</p>
-                    <a href="tel:+919699925064" className="text-gray-600 hover:text-blue-600">+91 9699925064</a>
+                    <a href="tel:+918766893127" className="text-gray-600 hover:text-blue-600">+91 8766893127</a>
                   </div>
                 </div>
 
@@ -54,7 +54,7 @@ const Contact = () => {
                   </svg>
                   <div>
                     <p className="font-medium text-gray-700">Email</p>
-                    <a href="mailto:contact.bitzbolt@gmail.com" className="text-gray-600 hover:text-blue-600">contact.bitzbolt@gmail.com</a>
+                    <a href="mailto:bitzbolt.it@gmail.com" className="text-gray-600 hover:text-blue-600">contact.bitzbolt@gmail.com</a>
                   </div>
                 </div>
               </div>
