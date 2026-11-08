@@ -1,0 +1,107 @@
+
+#root {
+  max-width:100%;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Optimized scroll animations */
+.gsap-title.is-visible,
+.gsap-paragraph.is-visible,
+.gsap-image.is-visible,
+.gsap-card.is-visible,
+.gsap-list-item.is-visible,
+.gsap-stat.is-visible,
+.gsap-calligraphy.is-visible {
+  animation: fade-in 0.6s ease forwards;
+}
+
+.gsap-title {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.gsap-paragraph {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.gsap-image {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.gsap-card {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.gsap-list-item:nth-child(odd) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.gsap-list-item:nth-child(even) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.gsap-stat {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.gsap-calligraphy {
+  opacity: 0;
+  transform: scale(0.8) rotate(-5deg);
+}
+
+
+.ink-spread {
+  animation: inkSpread 1.2s ease-out forwards;
+}
+
+/* Animations */
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translate(0) scale(1) rotate(0);
+  }
+}
+
+
+
+@keyframes inkSpread {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
