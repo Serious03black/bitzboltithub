@@ -22,7 +22,9 @@ import {
   ArrowRight,
   ShieldCheck,
   Building,
-  Laptop
+  Laptop,
+  Copy,
+  Check
 } from "lucide-react";
 
 interface JobOpening {
@@ -224,10 +226,18 @@ const jobOpenings: JobOpening[] = [
 ];
 
 const ASSESSMENT_URL = "https://icubeworld.in/exam";
+const REFERRAL_ID = "Bit250903XR3";
 
 const Careers = () => {
   const [selectedJobId, setSelectedJobId] = useState<string>("all");
   const [expandedJobId, setExpandedJobId] = useState<string>("full-stack-developer");
+  const [copiedRef, setCopiedRef] = useState(false);
+
+  const handleCopyRef = () => {
+    navigator.clipboard.writeText(REFERRAL_ID);
+    setCopiedRef(true);
+    setTimeout(() => setCopiedRef(false), 2000);
+  };
 
   const filteredJobs = selectedJobId === "all" 
     ? jobOpenings 
@@ -250,18 +260,58 @@ const Careers = () => {
         subtitle="Shape the Digital Future With Us — 100% Remote Engineering Opportunities"
         backgroundImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
       />
-
+ 
       <div className="bg-background py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-6xl">
 
           {/* Intro Section */}
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient-purple-gold">
               Current Job Openings
             </h2>
             <p className="text-foreground/80 text-lg">
               Explore permanent, full-time remote engineering positions at Bitzbolt. We welcome both freshers with strong practical skills and experienced developers ready to build enterprise solutions.
             </p>
+          </div>
+
+          {/* Top Mandatory Process Notice Banner */}
+          <div className="mb-10 p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-[#050C1E] via-[#0A1E2F] to-[#050C1E] border-2 border-[#FF5803] text-white shadow-[0_0_30px_rgba(255,88,3,0.2)] relative overflow-hidden">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="space-y-3">
+                {/* <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 text-xs font-bold uppercase rounded-full bg-[#FF5803] text-white">
+                    Important Notice For All Applicants
+                  </span>
+                </div> */}
+                <h3 className="text-xl sm:text-2xl font-bold text-white">
+                Process :
+                </h3>
+                <div className="flex flex-wrap items-center gap-2 text-sm sm:text-base text-white/95">
+                  <span className="bg-white/10 px-3 py-1 rounded-lg">
+                    1. Visit link: <a href={ASSESSMENT_URL} target="_blank" rel="noopener noreferrer" className="text-[#00D2FF] font-bold underline">icubeworld.in/exam</a>
+                  </span>
+                  <span className="text-white/60">➔</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-lg">
+                    2. Create Account
+                  </span>
+                  <span className="text-white/60">➔</span>
+                  <span className="bg-[#FF5803]/30 border border-[#FF5803] px-3 py-1 rounded-lg flex items-center gap-2">
+                    <span>3. Add Ref ID:</span>
+                    <strong className="font-mono text-[#FDBA01] text-base">{REFERRAL_ID}</strong>
+                    <button
+                      type="button"
+                      onClick={handleCopyRef}
+                      className="p-1 rounded hover:bg-white/20 text-white transition-colors"
+                      title="Copy Ref ID"
+                    >
+                      {copiedRef ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                    </button>
+                  </span>
+                </div>
+             
+              </div>
+           
+            </div>
           </div>
 
           {/* Job Filter Tabs */}
@@ -343,6 +393,40 @@ const Careers = () => {
                             <span>{job.workingDays}</span>
                           </div>
                         </div>
+
+                        {/* Process in Short */}
+                        <div className="pt-3 border-t border-border/70 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs sm:text-sm">
+                          
+                          <span className="text-foreground/90 font-medium">
+                            1. Visit <a href={ASSESSMENT_URL} target="_blank" rel="noopener noreferrer" className="text-[#00D2FF] font-bold underline">icubeworld.in/exam</a>
+                          </span>
+                          <span className="text-foreground/40">➔</span>
+                          <span className="text-foreground/90 font-medium">
+                            2. Create Account
+                          </span>
+                          <span className="text-foreground/40">➔</span>
+                          <span className="text-foreground/90 font-medium flex items-center gap-1.5">
+                            3. Add Ref ID:
+                            <span className="font-mono font-bold bg-[#FF5803]/15 text-[#FF5803] px-2 py-0.5 rounded border border-[#FF5803]/40 tracking-wider">
+                              {REFERRAL_ID}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleCopyRef();
+                              }}
+                              className="p-1 rounded hover:bg-[#FF5803]/20 text-[#FF5803] transition-colors"
+                              title="Copy Ref ID"
+                            >
+                              {copiedRef ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
+                            </button>
+                          </span>
+                          <span className="text-foreground/40">➔</span>
+                          <span className="text-foreground/90 font-medium">
+                            4. Complete Assessment
+                          </span>
+                        </div>
                       </div>
 
                       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
@@ -377,20 +461,53 @@ const Careers = () => {
                         transition={{ duration: 0.35 }}
                         className="p-6 sm:p-8 space-y-8 bg-muted/20"
                       >
-                        {/* Notice in job details */}
-                        <div className="p-4 rounded-xl bg-[#FF5803]/10 border border-[#FF5803]/30 flex items-start gap-3">
-                          <AlertTriangle className="w-5 h-5 text-[#FF5803] flex-shrink-0 mt-0.5" />
-                          <div className="text-sm text-foreground/90">
-                            <strong>Assessment Mandatory:</strong> All candidates must complete the online test at{" "}
-                            <a 
-                              href={ASSESSMENT_URL} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-[#FF5803] font-bold underline hover:text-[#FF7800]"
-                            >
-                              icubeworld.in/exam
-                            </a>{" "}
-                            to be considered for this position.
+                        {/* Notice & Process in Short in job details */}
+                        <div className="p-5 rounded-2xl bg-gradient-to-r from-[#050C1E] via-[#0A1E2F] to-[#050C1E] border-2 border-[#FF5803] text-white shadow-md">
+                          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div className="space-y-2">
+                              <div className="flex items-center gap-2">
+                                <span className="px-2.5 py-0.5 text-xs font-bold uppercase rounded-full bg-[#FF5803] text-white">
+                                  Mandatory Application Process
+                                </span>
+                              </div>
+                              <h5 className="font-bold text-base text-white">
+                                Application Process (In Short):
+                              </h5>
+                              <div className="flex flex-wrap items-center gap-2 text-sm text-white/95">
+                                <span><strong>1. Visit link:</strong> <a href={ASSESSMENT_URL} target="_blank" rel="noopener noreferrer" className="text-[#00D2FF] font-bold underline">icubeworld.in/exam</a></span>
+                                <span className="text-white/40">•</span>
+                                <span><strong>2. Create account</strong></span>
+                                <span className="text-white/40">•</span>
+                                <span className="flex items-center gap-1.5">
+                                  <strong>3. Add Ref ID:</strong>
+                                  <span className="font-mono font-bold bg-[#FF5803] text-white px-2.5 py-0.5 rounded tracking-wider shadow">
+                                    {REFERRAL_ID}
+                                  </span>
+                                  <button
+                                    type="button"
+                                    onClick={handleCopyRef}
+                                    className="p-1 rounded bg-white/10 hover:bg-white/20 text-white transition-colors"
+                                    title="Copy Ref ID"
+                                  >
+                                    {copiedRef ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                                  </button>
+                                </span>
+                              </div>
+                              <p className="text-xs text-[#FF7800] pt-1">
+                                ⚠️ Notice: For apply all candidate must complete the assessment. Applications without assessment not considered.
+                              </p>
+                            </div>
+                            <div className="flex-shrink-0">
+                              <a
+                                href={ASSESSMENT_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#FF5803] to-[#FDBA01] hover:from-[#FF6900] hover:to-[#FF5803] text-sm shadow transition-all"
+                              >
+                                <span>Take Assessment</span>
+                                <ExternalLink className="w-3.5 h-3.5" />
+                              </a>
+                            </div>
                           </div>
                         </div>
 
@@ -526,18 +643,31 @@ const Careers = () => {
                 <div className="w-12 h-12 rounded-xl bg-[#FF5803]/10 text-[#FF5803] flex items-center justify-center mb-4 font-bold text-lg">
                   1
                 </div>
-                <h4 className="text-xl font-bold text-foreground mb-2">Complete Assessment</h4>
-                <p className="text-foreground/70 text-sm mb-4">
-                  Visit <strong className="text-[#FF5803]">icubeworld.in/exam</strong> and complete the technical evaluation for your chosen stream.
+                <h4 className="text-xl font-bold text-foreground mb-2">Visit Link & Add Ref ID</h4>
+                <p className="text-foreground/70 text-sm mb-3">
+                  Visit <strong className="text-[#FF5803]">icubeworld.in/exam</strong>, create your account, and enter Reference ID:
                 </p>
-                <a
-                  href={ASSESSMENT_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-xs font-bold text-[#FF5803] hover:underline"
-                >
-                  Go to Assessment Link <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                </a>
+                <div className="mb-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#FF5803]/10 border border-[#FF5803]/40 font-mono font-bold text-sm text-[#FF5803]">
+                  <span>Ref ID: {REFERRAL_ID}</span>
+                  <button
+                    type="button"
+                    onClick={handleCopyRef}
+                    className="p-1 rounded hover:bg-[#FF5803]/20 text-[#FF5803] transition-colors"
+                    title="Copy Ref ID"
+                  >
+                    {copiedRef ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
+                </div>
+                <div>
+                  <a
+                    href={ASSESSMENT_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-xs font-bold text-[#FF5803] hover:underline"
+                  >
+                    Go to Assessment Link <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                  </a>
+                </div>
               </div>
               {/* Step 2 */}
               <div className="p-6 rounded-2xl bg-card border-2 border-[#FF5803] relative overflow-hidden shadow-lg">
