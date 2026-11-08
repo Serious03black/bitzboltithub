@@ -19,7 +19,7 @@ const TestimonialSection: React.FC = () => {
           <div className="absolute -bottom-4 -right-4 text-6xl text-shivayan-gold opacity-50 transform rotate-180">❝</div>
           
           <blockquote className="text-lg md:text-xl italic text-foreground/90 mb-8 relative z-10">
-            Shivayan Enterprises transformed our business with their innovative software solutions. Their team's deep technical expertise combined with their understanding of our business needs led to a product that exceeded our expectations. What sets them apart is their commitment to excellence and the values they bring to every project.
+            Bitzbolt transformed our business with their innovative software solutions. Their team's deep technical expertise combined with their understanding of our business needs led to a product that exceeded our expectations. What sets them apart is their commitment to excellence and the values they bring to every project.
           </blockquote>
           
           <div className="flex items-center space-x-4">

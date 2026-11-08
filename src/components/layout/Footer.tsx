@@ -25,10 +25,12 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <Link to="/" className="inline-block">
-              <span className="font-display text-2xl font-bold text-gradient-orange-yellow">
-                Shivayan
-              </span>
+            <Link to="/" className="inline-block" aria-label="Bitzbolt Home">
+              <img 
+                src="/light.png" 
+                alt="Bitzbolt" 
+                className="h-10 w-auto max-w-[180px] object-contain"
+              />
             </Link>
             <p className="text-white/80 max-w-xs">
               Blending innovation with Indian heritage to create exceptional software solutions for global businesses.
@@ -166,7 +168,7 @@ const Footer = () => {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                <span className="text-white/80">contact@shivayan.com</span>
+                <span className="text-white/80">contact@bitzbolt.com</span>
               </li>
             </ul>
           </motion.div>
@@ -174,7 +176,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/70 text-sm">
-            © {currentYear} Shivayan Enterprises. All rights reserved.
+            © {currentYear} Bitzbolt. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6">

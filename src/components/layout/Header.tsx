@@ -52,14 +52,24 @@ const Header = () => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center" aria-label="Bitzbolt Home">
           <motion.div 
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="flex items-center"
           >
-            <span className="font-display text-2xl font-bold text-gradient-purple-gold">
-              Shivayan
-            </span>
+            {/* Light mode: Dark logo */}
+            <img 
+              src="/dark.png" 
+              alt="Bitzbolt" 
+              className="h-8 sm:h-9 md:h-10 w-auto max-w-[160px] sm:max-w-[200px] object-contain block dark:hidden"
+            />
+            {/* Dark mode: Light logo */}
+            <img 
+              src="/light.png" 
+              alt="Bitzbolt" 
+              className="h-8 sm:h-9 md:h-10 w-auto max-w-[160px] sm:max-w-[200px] object-contain hidden dark:block"
+            />
           </motion.div>
         </Link>
 

@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => {
               Who We Are
             </h2>
             <p className="text-lg mb-6 text-foreground/80">
-              Shivayan Enterprises is a forward-thinking software development and IT consulting company that combines cutting-edge technology with the rich heritage and values of India.
+              Bitzbolt is a forward-thinking software development and IT consulting company that combines cutting-edge technology with high-performance engineering standards.
             </p>
             <p className="text-lg mb-8 text-foreground/80">
               We believe in creating software solutions that are not just efficient and innovative, but also built on the foundations of trust, respect, and excellence that are deeply rooted in our cultural ethos.
@@ -53,7 +53,7 @@ const AboutSection: React.FC = () => {
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-shivayan-purple/30 rounded-full blur-xl"></div>
               <img 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" 
-                alt="Shivayan team working together" 
+                alt="Bitzbolt team working together" 
                 className="w-full h-auto rounded-lg shadow-xl relative z-10" 
               />
             </div>

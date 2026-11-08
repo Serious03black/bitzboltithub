@@ -25,6 +25,17 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				bitzbolt: {
+					purple: '#7E57C2',
+					gold: '#FFD700',
+					orange: '#FF7043',
+					yellow: '#FFEB3B',
+					cyan: '#00BCD4',
+					'dark-purple': '#5E35B1',
+					'light-purple': '#B39DDB',
+					'dark-gold': '#FFC107',
+					'light-gold': '#FFF59D',
+				},
 				shivayan: {
 					purple: '#7E57C2',
 					gold: '#FFD700',

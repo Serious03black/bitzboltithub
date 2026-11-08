@@ -101,19 +101,19 @@ const Portfolio = () => {
 
   const testimonials = [
     {
-      quote: "Shivayan transformed our business with their innovative approach and attention to detail.",
+      quote: "Bitzbolt transformed our business with their innovative approach and attention to detail.",
       author: "Priya Sharma",
       company: "TechVision Global",
       fontStyle: "font-cursive"
     },
     {
-      quote: "Their deep understanding of both technology and cultural nuances made all the difference.",
+      quote: "Their deep understanding of both technology and client needs made all the difference.",
       author: "Rajiv Mehta",
       company: "HealthPlus",
       fontStyle: "font-calligraphy"
     },
     {
-      quote: "Working with Shivayan was a seamless experience from concept to execution.",
+      quote: "Working with Bitzbolt was a seamless experience from concept to execution.",
       author: "Anika Singh",
       company: "EduSphere",
       fontStyle: "font-decorative"
@@ -124,7 +124,7 @@ const Portfolio = () => {
     <>
       <SEO 
         title="Portfolio" 
-        description="Explore our portfolio of successful projects and see how Shivayan Enterprises has helped businesses transform through technology."
+        description="Explore our portfolio of successful projects and see how Bitzbolt has helped businesses transform through technology."
       />
       
       <PageHeader 
@@ -192,7 +192,7 @@ const Portfolio = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient-purple-gold">Client Testimonials</h2>
             <p className="text-lg max-w-2xl mx-auto text-foreground/80">
-              Read what our clients have to say about their experience working with Shivayan Enterprises.
+              Read what our clients have to say about their experience working with Bitzbolt.
             </p>
           </div>
           

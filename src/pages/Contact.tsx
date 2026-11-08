@@ -5,8 +5,8 @@ const Contact = () => {
   return (
     <>
       <SEO 
-        title="Contact Us - Shivayan Enterprises" 
-        description="Get in touch with Shivayan Enterprises for your software development and IT consulting needs."
+        title="Contact Us - Bitzbolt" 
+        description="Get in touch with Bitzbolt for your software development and IT consulting needs."
       />
       
       <PageHeader 
@@ -54,7 +54,7 @@ const Contact = () => {
                   </svg>
                   <div>
                     <p className="font-medium text-gray-700">Email</p>
-                    <a href="mailto:contact.shivayan@gmail.com" className="text-gray-600 hover:text-blue-600">contact.shivayan@gmail.com</a>
+                    <a href="mailto:contact.bitzbolt@gmail.com" className="text-gray-600 hover:text-blue-600">contact.bitzbolt@gmail.com</a>
                   </div>
                 </div>
               </div>

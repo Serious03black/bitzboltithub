@@ -59,7 +59,7 @@ export const products = [
     category: "Enterprise"
   },
   {
-    title: "ShivaCloud Platform",
+    title: "BitzCloud Platform",
     description: "Our flagship cloud platform offering scalable infrastructure and services.",
     category: "Cloud"
   },

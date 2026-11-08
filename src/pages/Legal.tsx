@@ -7,7 +7,7 @@ const Legal = () => {
     <>
       <SEO 
         title="Legal Information" 
-        description="Review Shivayan Enterprises' privacy policy, terms of service, and other legal information."
+        description="Review Bitzbolt's privacy policy, terms of service, and other legal information."
       />
       
       <PageHeader 

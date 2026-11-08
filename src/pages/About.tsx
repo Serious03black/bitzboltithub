@@ -56,12 +56,12 @@ const About = () => {
     <>
       <SEO 
         title="About Us" 
-        description="Learn about Shivayan Enterprises - our journey, mission, vision, and the team driving innovation with Indian heritage."
+        description="Learn about Bitzbolt - our journey, mission, vision, and the team driving digital innovation."
       />
       
       <PageHeader 
         title="About Us" 
-        subtitle="Our Journey, Mission, and the Team Behind Shivayan"
+        subtitle="Our Journey, Mission, and the Team Behind Bitzbolt"
         backgroundImage="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
       />
 
@@ -81,17 +81,17 @@ const About = () => {
               <div className="space-y-6">
                 <ScrollReveal delay={0.1}>
                   <p className="text-lg text-foreground/80 animate-text">
-                    Founded in 2025, Shivayan Enterprises began with a vision to create technology solutions that blend modern innovation with timeless values from Indian heritage. Our name "Shivayan" combines elements representing transformation and journey, reflecting our commitment to guiding clients through their technological evolution.
+                    Founded in 2025, Bitzbolt began with a vision to create powerful technology solutions that combine modern innovation, speed, and precision engineering. Our name "Bitzbolt" reflects the synergy between the fundamental units of computing (bits) and the electrifying speed of innovation (bolt), representing our commitment to powering our clients' digital transformation.
                   </p>
                 </ScrollReveal>
                 <ScrollReveal delay={0.2}>
                   <p className="text-lg text-foreground/80 animate-text">
-                    Starting as a small team of passionate technologists in Maharatra, we've grown to become a global company with offices in India, the United States, and Singapore. Throughout our growth, we've maintained our founding principles: technical excellence, cultural wisdom, and client-centered service.
+                    Starting as a small team of passionate technologists in Maharashtra, we've grown to become a dynamic company serving global clients. Throughout our growth, we've maintained our founding principles: technical excellence, integrity, and client-centered service.
                   </p>
                 </ScrollReveal>
                 <ScrollReveal delay={0.3}>
                   <p className="text-lg text-foreground/80 animate-text">
-                    Today, Shivayan Enterprises serves clients across multiple industries. We take pride in our diverse, talented team that brings together different perspectives united by a shared commitment to innovation and excellence.
+                    Today, Bitzbolt serves clients across multiple industries. We take pride in our diverse, talented team that brings together different perspectives united by a shared commitment to innovation and excellence.
                   </p>
                 </ScrollReveal>
               </div>
