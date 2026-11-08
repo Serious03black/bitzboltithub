@@ -3,14 +3,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/background.png" />
+    <link rel="icon" type="image/png" href="/light.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Shivayan Enterprises - Where Innovation Meets Heritage" />
-    <title>Shivayan Enterprises</title>
+    <meta name="description" content="Bitzbolt - Where Innovation Meets Excellence" />
+    <title>Bitzbolt</title>
     
     <!-- Preload critical assets -->
-    <link rel="preload" href="./public/background.png" as="image" />
+    <link rel="preload" href="/dark.png" as="image" />
+    <link rel="preload" href="/light.png" as="image" />
+    <link rel="preload" href="/background.png" as="image" />
+    
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('bitzbolt-ui-theme');
+          var isDark = theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
