@@ -14,14 +14,14 @@ const PageHeader = ({
 }: PageHeaderProps) => {
   return (
     <div 
-      className="relative bg-shivayan-dark-purple py-20 md:py-32 overflow-hidden"
+      className="relative bg-[#050C1E] py-20 md:py-32 overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(94, 53, 177, 0.85), rgba(126, 87, 194, 0.9)), url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(rgba(5, 12, 30, 0.88), rgba(10, 30, 47, 0.92)), url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-shivayan-dark-purple/80 to-shivayan-purple/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#050C1E]/90 via-[#0A1E2F]/80 to-[#FF5803]/15"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">

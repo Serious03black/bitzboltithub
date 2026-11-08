@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-shivayan-dark-purple to-shivayan-purple text-white pt-16 pb-8">
+    <footer className="bg-gradient-to-br from-[#050C1E] via-[#0A1E2F] to-[#050C1E] text-white pt-16 pb-8 border-t border-[#FF5803]/20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <motion.div 

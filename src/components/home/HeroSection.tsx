@@ -68,29 +68,45 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ multilingualTexts = [] }) => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-shivayan-dark-purple via-shivayan-purple to-shivayan-gold opacity-70"></div>
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden w-full bg-[#050C1E]">
+      {/* Deep tech navy & midnight gradient base matching Bitzbolt logo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050C1E] via-[#0A1E2F] to-[#050C1E]"></div>
+
+      {/* Radiant electric bolt glow in the center */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,88,3,0.2),transparent_65%)] pointer-events-none"></div>
+
+      {/* Cyber cyan subtle glow on the bottom edge */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_100%,rgba(0,188,212,0.12),transparent_70%)] pointer-events-none"></div>
       
-      {/* Background image */}
-      <img 
-        className="absolute w-full h-full object-contain opacity-40"
-        src={image1}
-        alt="Background pattern"
-      />
+      {/* Background logo image - clearly visible, beautifully framed, matching the color palette */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-[2]">
+        <motion.img 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="w-full max-w-4xl max-h-[75vh] object-contain opacity-55 sm:opacity-65 md:opacity-75 filter drop-shadow-[0_0_60px_rgba(255,88,3,0.35)]"
+          src={image1}
+          alt="Bitzbolt Logo Background"
+        />
+      </div>
+
+      {/* Soft gradient mask overlay so text remains ultra-crisp and readable */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#050C1E] via-transparent to-[#050C1E]/70 pointer-events-none z-[3]"></div>
       
       {/* Floating tech icons */}
-      {TechIcons.slice(0, 8).map((tech, index) => (
-        <FloatingTechIcon
-          key={tech.name}
-          icon={tech.icon}
-          x={`${10 + (index * 15) % 75}%`}
-          y={`${15 + (index * 20) % 65}%`}
-          delay={index * 0.15}
-          size={3 + Math.random() * 2}
-          rotate={-15 + Math.random() * 30}
-        />
-      ))}
+      <div className="absolute inset-0 z-[4] pointer-events-none">
+        {TechIcons.slice(0, 8).map((tech, index) => (
+          <FloatingTechIcon
+            key={tech.name}
+            icon={tech.icon}
+            x={`${10 + (index * 15) % 75}%`}
+            y={`${15 + (index * 20) % 65}%`}
+            delay={index * 0.15}
+            size={3 + Math.random() * 2}
+            rotate={-15 + Math.random() * 30}
+          />
+        ))}
+      </div>
       
       <div className="w-full px-4 sm:px-6 relative z-10 text-center">
         <div className="max-w-5xl mx-auto">
@@ -99,30 +115,30 @@ const HeroSection: React.FC<HeroSectionProps> = ({ multilingualTexts = [] }) => 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6">
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
               <WavyText 
                 text="WHERE" 
                 delay={0.3}
                 staggerDelay={0.04}
-                className="mr-4"
+                className="mr-3 sm:mr-4 drop-shadow-md"
               />
               <WavyText 
                 text="POWER" 
                 delay={0.6}
                 staggerDelay={0.04}
-                className="text-shivayan-gold mr-4"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF5803] via-[#FF7800] to-[#FDBA01] mr-3 sm:mr-4 drop-shadow-[0_0_25px_rgba(255,88,3,0.4)]"
               />
               <WavyText 
                 text="MEETS" 
                 delay={0.9}
                 staggerDelay={0.04}
-                className="mr-4"
+                className="mr-3 sm:mr-4 drop-shadow-md"
               />
               <WavyText 
                 text="INNOVATION" 
                 delay={1.2}
                 staggerDelay={0.04}
-                className="text-shivayan-gold"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-[#FDBA01] via-[#FF7800] to-[#FF5803] drop-shadow-[0_0_25px_rgba(255,88,3,0.4)]"
               />
             </h1>
           </motion.div>
@@ -132,7 +148,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ multilingualTexts = [] }) => 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto drop-shadow-sm font-light">
               Building cutting-edge enterprise software solutions that drive business growth and transformation.
             </p>
           </motion.div>
@@ -143,7 +159,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ multilingualTexts = [] }) => 
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-playfair text-white">
+            <h2 className="text-xl md:text-2xl tracking-widest uppercase font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white/90 via-amber-200/90 to-orange-200/90 drop-shadow-sm">
               <WavyText 
                 text="EXCELLENCE AND INNOVATION" 
                 delay={1.5}
@@ -162,7 +178,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ multilingualTexts = [] }) => 
               <CustomButton 
                 variant="primary" 
                 size="lg"
-                className="bg-shivayan-gold hover:bg-shivayan-gold/90 text-shivayan-dark-purple min-w-[200px]"
+                className="bg-gradient-to-r from-[#FF5803] via-[#FF6900] to-[#FDBA01] hover:from-[#FF6900] hover:to-[#FF5803] text-white font-bold min-w-[200px] shadow-[0_0_30px_rgba(255,88,3,0.4)] hover:shadow-[0_0_40px_rgba(255,88,3,0.65)] border-none transition-all duration-300"
                 icon={
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -177,7 +193,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ multilingualTexts = [] }) => 
               <CustomButton 
                 variant="outline" 
                 size="lg"
-                className="border-shivayan-gold text-shivayan-gold hover:bg-shivayan-gold/10 min-w-[200px]"
+                className="border-2 border-[#FF7800]/80 text-[#FF7800] hover:text-white hover:bg-[#FF5803]/20 hover:border-[#FF5803] min-w-[200px] backdrop-blur-sm shadow-[0_0_20px_rgba(255,88,3,0.15)] transition-all duration-300"
               >
                 View Our Work
               </CustomButton>

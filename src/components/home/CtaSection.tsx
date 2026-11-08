@@ -7,10 +7,11 @@ import Section from '@/components/shared/Section';
 
 const CtaSection: React.FC = () => {
   return (
-    <Section className="bg-gradient-to-r from-shivayan-purple to-shivayan-dark-purple text-white">
-      <div className="text-center max-w-3xl mx-auto">
+    <Section className="bg-gradient-to-br from-[#050C1E] via-[#0A1E2F] to-[#050C1E] text-white relative overflow-hidden border-t border-[#FF5803]/20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,88,3,0.15),transparent_70%)] pointer-events-none"></div>
+      <div className="text-center max-w-3xl mx-auto relative z-10">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-6"
+          className="text-3xl md:text-4xl font-bold mb-6 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -40,6 +41,7 @@ const CtaSection: React.FC = () => {
             <CustomButton 
               variant="primary" 
               size="lg"
+              className="bg-gradient-to-r from-[#FF5803] via-[#FF6900] to-[#FDBA01] hover:from-[#FF6900] hover:to-[#FF5803] text-white font-bold shadow-[0_0_25px_rgba(255,88,3,0.4)] border-none"
               icon={
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
